@@ -70,7 +70,7 @@
           <a class="nav-link" href="{{url('/')}}">View Website</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/')}}">Fork On Github</a>
+          <a class="nav-link" href="https://github.com/uzair404/DynamicPortfolio.git">Fork On Github</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Edit</a>
