@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Uzair Asif - Programming Enthusiastic</title>
+  <title>Testing Dynamic Portfolio</title>
   <meta content="Uzair Asif - Programming Enthusiastic" name="description">
   <meta content="Uzair Asif - Programming Enthusiastic" name="keywords">
 

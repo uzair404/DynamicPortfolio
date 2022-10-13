@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 11, 2022 at 04:47 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.13
+-- Host: localhost:3306
+-- Generation Time: Oct 12, 2022 at 04:28 PM
+-- Server version: 10.3.35-MariaDB-cll-lve
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `programmerinloop_dynamicportfolio`
+-- Database: `programmerinloop_myprotfolio`
 --
 
 -- --------------------------------------------------------
@@ -105,7 +106,7 @@ CREATE TABLE `hero_section` (
 --
 
 INSERT INTO `hero_section` (`id`, `file`, `heading`, `sub_heading`, `created_at`, `updated_at`) VALUES
-(1, '1664850921hero_image.png', 'I am Uzair Asif', 'Backend Developer, Freelancer, Programming Enthusiastic', '2022-09-23 23:50:20', '2022-10-03 21:35:21');
+(1, '1665215716hero_image.png', 'I am Uzair Asif', 'Backend Developer, Freelancer, Programming Enthusiastic', '2022-09-23 23:50:20', '2022-10-08 02:55:16');
 
 -- --------------------------------------------------------
 
@@ -135,8 +136,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (9, '2022_10_02_021009_create_skills_table', 4),
 (10, '2022_10_03_105831_create_contact_details_table', 5),
 (11, '2022_10_03_110147_create_social_links_table', 5),
-(12, '2022_10_04_030824_create_services_table', 6),
-(14, '2022_10_08_162010_create_table_views', 7);
+(12, '2022_10_04_030824_create_services_table', 6);
 
 -- --------------------------------------------------------
 
@@ -216,7 +216,7 @@ CREATE TABLE `sections` (
 --
 
 INSERT INTO `sections` (`id`, `name`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'navbar', 1, '2022-10-01 05:46:22', '2022-10-01 22:10:56'),
+(1, 'navbar', 1, '2022-10-01 05:46:22', '2022-10-07 10:58:37'),
 (2, 'hero', 1, '2022-10-01 05:47:28', '2022-10-01 07:10:39'),
 (3, 'about', 1, '2022-10-01 05:47:48', '2022-10-01 05:47:48'),
 (4, 'services', 1, '2022-10-01 05:48:09', '2022-10-01 05:48:09'),
@@ -298,7 +298,7 @@ INSERT INTO `social_links` (`id`, `name`, `link`, `status`, `created_at`, `updat
 (1, 'facebook', 'https://www.facebook.com/', '1', '2022-10-03 11:29:48', '2022-10-03 21:12:02'),
 (2, 'instagram', 'https://www.Instagram.com/', '1', '2022-10-03 11:29:48', '2022-10-03 09:10:26'),
 (3, 'twitter', 'https://www.Twitter.com/', '0', '2022-10-03 11:29:48', '2022-10-03 21:12:09'),
-(4, 'linkedin', 'https://www.Linkedin.com/', '0', '2022-10-03 11:29:48', '2022-10-03 09:10:43');
+(4, 'linkedin', 'https://www.linkedin.com/in/uzair-asif-151b4718a', '0', '2022-10-03 11:29:48', '2022-10-10 21:20:47');
 
 -- --------------------------------------------------------
 
@@ -342,7 +342,7 @@ CREATE TABLE `views` (
 --
 
 INSERT INTO `views` (`views`, `created_at`, `updated_at`, `id`) VALUES
-('22', '2022-10-08 11:30:42', '2022-10-09 03:34:11', 1);
+('62', '2022-10-08 11:30:42', '2022-10-12 02:26:24', 1);
 
 -- --------------------------------------------------------
 
@@ -367,7 +367,8 @@ CREATE TABLE `works` (
 --
 
 INSERT INTO `works` (`id`, `file`, `heading`, `category`, `date`, `link`, `status`, `created_at`, `updated_at`) VALUES
-(1, '1665070679work_image.png', 'Khandan Walay Messaging App', 'Backend Development', 'Jun 15. 2022', 'https://khandanwalay.ml/', '1', '2022-10-05 21:22:43', '2022-10-06 10:37:59');
+(1, '1665215795work_image.png', 'Khandan Walay Messaging App', 'Backend Development', 'Jun 15. 2022', 'https://khandanwalay.ml/', '1', '2022-10-05 21:22:43', '2022-10-08 02:56:35'),
+(2, '1665539995work_image.png', 'Dynamic Portfolio', 'Backend Development', '8 oct, 2022', 'https://test.createmyprotfolio.com/', '1', '2022-10-11 20:59:55', '2022-10-11 21:03:57');
 
 --
 -- Indexes for dumped tables
@@ -499,7 +500,7 @@ ALTER TABLE `hero_section`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `nav_sections`
@@ -548,6 +549,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `views`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `works`
+--
+ALTER TABLE `works`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
